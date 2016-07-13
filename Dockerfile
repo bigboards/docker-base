@@ -1,4 +1,4 @@
-FROM mazzolino/armhf-ubuntu:14.04
+FROM __base-img__:14.04
 
 MAINTAINER bigboards
 
