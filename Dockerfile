@@ -16,9 +16,9 @@ RUN mkdir -p /opt/bb \
 
 # install curl
 RUN apt-get update \
-    && apt-get install -y curl \
+    && apt-get install -y curl apt-transport-https \
     && apt-get autoremove \
-    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/cache/apt/archives/*.deb /var/cache/apt/archives/partials/*
 
 # Define default command.
 CMD ["bash"]
